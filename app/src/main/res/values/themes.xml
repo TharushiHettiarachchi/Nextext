@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Nextext" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize colors -->
+        <item name="colorPrimary">@color/mainPurple</item>
+        <item name="colorPrimaryVariant">@color/mainPurple</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/secPurple</item>
+    </style>
+</resources>

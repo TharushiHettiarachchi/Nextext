@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Nextext</string>
+    <string name="signIn">Sign In</string>
+    <string name="firstName">First Name</string>
+    <string name="mobileNumber">Mobile Number</string>
+    <string name="lastName">Last Name</string>
+    <string name="profile">Profile</string>
+    <string name="selectContact">Select a Contact</string>
+    <string name="createAccount">Create an account</string>
+    <string name="updateProfile">Update Profile</string>
+    <string name="enterMobileNumber">Enter the Mobile Number</string>
+</resources>

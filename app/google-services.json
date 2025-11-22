@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "786497346942",
+    "project_id": "nextext-ec45f",
+    "storage_bucket": "nextext-ec45f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786497346942:android:d897b7b28dcce478d2a72f",
+        "android_client_info": {
+          "package_name": "com.webstudio.nextext"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1WXzCLRHYeP36QKW4L55byHisXoXWfmU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
