@@ -106,14 +106,14 @@ class ProfileActivity: AppCompatActivity() {
         val mobile = sharedPref.getString("mobile", "") ?: return
 
         if (imageUri != null) {
-            // Upload Image
+
             uploadToCloudinary(imageUri!!) { url ->
                 if (url != null) {
 
-                    // Save URL locally
+
                     sharedPref.edit().putString("profileImage", url).apply()
 
-                    // Save to Firestore
+
                     val db = com.google.firebase.firestore.FirebaseFirestore.getInstance()
                     db.collection("users")
                         .whereEqualTo("mobile", mobile)

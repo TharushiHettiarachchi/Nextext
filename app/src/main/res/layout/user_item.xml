@@ -34,8 +34,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="+94XXXXXXXXX"
-            android:textColor="@color/black"
-            android:textSize="14sp"/>
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
     </LinearLayout>
 
     <Button

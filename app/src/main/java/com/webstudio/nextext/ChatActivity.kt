@@ -3,11 +3,13 @@ package com.webstudio.nextext
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.google.firebase.Timestamp
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
@@ -34,6 +36,7 @@ class ChatActivity : AppCompatActivity() {
         messageBox = findViewById(R.id.messageBox)
         recyclerView = findViewById(R.id.recyclerViewMessages)
         val chatUserName = findViewById<TextView>(R.id.chatUserName)
+        val profileImageView = findViewById<ImageView>(R.id.imageView7)
 
         val userName = intent.getStringExtra("userName")
         val mobile = intent.getStringExtra("mobile")
@@ -47,8 +50,26 @@ class ChatActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
 
+
+        val db = FirebaseFirestore.getInstance()
+        db.collection("users")
+            .whereEqualTo("mobile", receiver)
+            .get()
+            .addOnSuccessListener { querySnapshot ->
+                val userDoc = querySnapshot.documents.firstOrNull()
+                userDoc?.getString("profileImage")?.let { imageUrl ->
+
+                    Glide.with(this)
+                        .load(imageUrl)
+                        .placeholder(R.drawable.default_profile)
+                        .circleCrop()
+                        .into(profileImageView)
+                }
+            }
+
         listenForMessages()
     }
+
 
     fun sendMessage(view: View) {
         val msg = messageBox.text.toString().trim()
