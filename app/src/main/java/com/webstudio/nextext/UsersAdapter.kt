@@ -35,7 +35,7 @@ class UsersAdapter(
 
 
         Glide.with(holder.itemView.context)
-            .load(user.profileUrl)
+            .load(user.profileImage)
             .placeholder(R.drawable.default_profile)
             .circleCrop()
             .into(holder.profile)

@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/profileFname"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -81,11 +81,11 @@
         android:fontFamily="@font/josefin_sans_medium"
         android:text="@string/lastName"
         android:textColor="@color/mainPurple"
-        app:layout_constraintStart_toStartOf="@+id/editTextText"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintStart_toStartOf="@+id/profileFname"
+        app:layout_constraintTop_toBottomOf="@+id/profileFname" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/profileLname"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -95,7 +95,7 @@
         android:shadowColor="@color/mainPurple"
         android:textColor="@color/mainPurple"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="@+id/profileFname"
         app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -107,11 +107,11 @@
         android:fontFamily="@font/josefin_sans_medium"
         android:text="@string/mobileNumber"
         android:textColor="@color/mainPurple"
-        app:layout_constraintStart_toStartOf="@+id/editTextText3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintStart_toStartOf="@+id/profileLname"
+        app:layout_constraintTop_toBottomOf="@+id/profileLname" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/profileMobile"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -121,7 +121,7 @@
         android:shadowColor="@color/mainPurple"
         android:textColor="@color/mainPurple"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText3"
+        app:layout_constraintEnd_toEndOf="@+id/profileLname"
         app:layout_constraintStart_toStartOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -130,10 +130,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:onClick="updateProfile"
         android:fontFamily="@font/josefin_sans_bold"
         android:text="@string/updateProfile"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText4"
-        app:layout_constraintStart_toStartOf="@+id/editTextText4"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+        app:layout_constraintEnd_toEndOf="@+id/profileMobile"
+        app:layout_constraintStart_toStartOf="@+id/profileMobile"
+        app:layout_constraintTop_toBottomOf="@+id/profileMobile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

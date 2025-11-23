@@ -43,7 +43,20 @@ class MainActivity : AppCompatActivity() {
             .get()
             .addOnSuccessListener { documents ->
                 if (!documents.isEmpty) {
+                    val userDoc = documents.documents[0]
+                    val firstName = userDoc.getString("firstName")
+                    val  lastName= userDoc.getString("lastName")
+                    val mobileNumber = userDoc.getString("mobile")
+                    val profileImage = userDoc.getString("profileImage")
 
+                    val sharedPref = getSharedPreferences("UserData", MODE_PRIVATE)
+                    val editor = sharedPref.edit()
+
+                    editor.putString("firstName", firstName)
+                    editor.putString("lastName", lastName)
+                    editor.putString("mobile", mobileNumber)
+                    editor.putString("profileImage", profileImage)
+                    editor.apply()
                     Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, HomeActivity::class.java))
                     finish()

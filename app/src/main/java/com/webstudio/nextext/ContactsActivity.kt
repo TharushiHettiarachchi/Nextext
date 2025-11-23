@@ -25,13 +25,19 @@ class ContactsActivity :AppCompatActivity(){
                     User(
                         name = doc.getString("firstName")+" "+doc.getString("lastName") ?: "",
                         mobile = doc.getString("mobile") ?: "",
-                        profileUrl = doc.getString("profileUrl") ?: ""
+                        profileImage = doc.getString("profileImage") ?: ""
                     )
 
                 }
                 val adapter = UsersAdapter(usersList) { user ->
 
                     Toast.makeText(this, "Message ${user.name}", Toast.LENGTH_SHORT).show()
+
+                    val intent = Intent(this, ChatActivity::class.java)
+                    intent.putExtra("userName", user.name)
+                    intent.putExtra("mobile", user.mobile)
+                    startActivity(intent)
+
 
                 }
                 recyclerView.adapter = adapter
